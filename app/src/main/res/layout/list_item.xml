@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.comanch.testovie_list.dataBase.StarTrackData" />
+
+        <variable
+            name="clickListener"
+            type="com.comanch.testovie_list.listFragment.ItemListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:soundEffectsEnabled="false"
+        android:background="@drawable/rectangle_for_list"
+        android:onClick="@{() -> clickListener.onClick(item)}">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/list_item_time"
+            android:gravity="center"
+            android:text="@string/loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+ />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

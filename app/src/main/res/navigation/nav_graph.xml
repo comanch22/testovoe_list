@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.comanch.testovie_list.listFragment.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.comanch.testovie_list.detailFragment.DetailFragment"
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/action_detailFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="itemId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.comanch.testovie_list.aboutFragment.AboutAppFragment"
+        android:label="AboutAppFragment" >
+        <action
+            android:id="@+id/action_aboutAppFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+</navigation>

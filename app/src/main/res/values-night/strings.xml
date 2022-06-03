@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">loading...</string>
+    <string name="objects_in_space">objects in space</string>
+    <string name="aboutapp">aboutApp</string>
+</resources>
