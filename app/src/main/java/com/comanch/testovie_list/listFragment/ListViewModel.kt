@@ -72,8 +72,8 @@ class ListViewModel @Inject constructor(private val database: StarTrackDao) : Vi
         viewModelScope.launch {
 
             val size = database.getCount()
-            if (size != null && size >= 10) {
-                _toast.value = LiveDataEvent("limit reached (10)")
+            if (size != null && size >= 50) {
+                _toast.value = LiveDataEvent("limit reached (50)")
             } else {
                 val notSealedItem = database.getNotSealed()
                 if (notSealedItem != null){
